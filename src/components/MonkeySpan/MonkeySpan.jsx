@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const EMOJISPAN_DEFAULTS = {
-  ariaLabel: "an emoji",
+export const MONKEYSPAN_DEFAULTS = {
+  ariaLabel: "A Monkey Emoji",
   children: "🐒",
   role: "img",
 };
 
-function EmojiSpan(props) {
+function MonkeySpan(props) {
   const {
-    ariaLabel = EMOJISPAN_DEFAULTS.ariaLabel,
-    children = EMOJISPAN_DEFAULTS.children,
-    role = EMOJISPAN_DEFAULTS.role,
+    ariaLabel = MONKEYSPAN_DEFAULTS.ariaLabel,
+    children = MONKEYSPAN_DEFAULTS.children,
+    role = MONKEYSPAN_DEFAULTS.role,
   } = props;
 
   return (
@@ -21,10 +21,25 @@ function EmojiSpan(props) {
   );
 }
 
-EmojiSpan.propTypes = {
+MonkeySpan.propTypes = {
+  /**
+   * The aria-label to pass through to describe your emoji
+   */
   ariaLabel: PropTypes.string,
+  /**
+   * The emoji to render
+   */
   children: PropTypes.node,
+  /**
+   * The aria role (not recommended to change from "img")
+   */
   role: PropTypes.string,
 };
 
-export default EmojiSpan;
+MonkeySpan.defaultProps = {
+  ariaLabel: MONKEYSPAN_DEFAULTS.ariaLabel,
+  children: MONKEYSPAN_DEFAULTS.children,
+  role: MONKEYSPAN_DEFAULTS.role,
+};
+
+export default MonkeySpan;

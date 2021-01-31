@@ -14,6 +14,7 @@ const babelOptions = {
 };
 
 const globals = {
+  "prop-types": "PropTypes",
   react: "React",
   "react-dom": "ReactDOM",
 };

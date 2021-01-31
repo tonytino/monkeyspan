@@ -5,5 +5,8 @@ module.exports = {
   },
   extends: ["plugin:react/recommended", "airbnb", "prettier"],
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+  },
 };

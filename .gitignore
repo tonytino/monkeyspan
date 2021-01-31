@@ -119,3 +119,7 @@ dist
 
 # babel config testing output dir
 .babel-config-test/
+
+# build artifacts
+bundle.js
+bundle.js.map

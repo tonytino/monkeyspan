@@ -11,7 +11,7 @@
     "clean:prettier": "npx prettier --write .",
     "tag": "npm run tag:set --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
     "tag:set": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
-    "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title \"$npm_config_value\"",
+    "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md",
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "npx eslint .",
     "test:prettier": "npx prettier --check .",

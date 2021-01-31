@@ -2,7 +2,11 @@
 
 ## About
 
-An example of how to make a React component package.
+An example of how to make a React component package. 🐒
+
+See this package in action in this [CodeSandbox](https://codesandbox.io/s/nervous-frost-r0qcp?file=/src/App.js). 🏜
+
+Find this package on [npm]. 👾
 
 ## Tooling
 
@@ -12,6 +16,7 @@ An example of how to make a React component package.
 - [Husky](https://github.com/typicode/husky)
 - [lint-staged](https://github.com/okonet/lint-staged)
 - [Prettier](https://prettier.io/)
+- [prop-types](https://www.npmjs.com/package/prop-types)
 - [Rollup](https://rollupjs.org/guide/en/)
 
 ## Usage
@@ -92,29 +97,24 @@ _For now, the only way to contribute to this package with visibility into the ch
 
 In order to generate a release, you need to produce a new package version and a corresponding tag for said version.
 
-For example, let's say you want to add a component to this package.
+For example, let's say you want to add a component or feature to this package.
 
-To do so, you'd simply add your component, commit your work, then produce your version via:
+To do so, you'd simply add your component/feature, commit your work, then produce your version via:
 
-1. Open `package.json` and update the `version` accordingly (e.g. `1.2.3` to `1.3.0`).
+1. Determine what type of changes you've made per [Semantic Versioning] to identify what the next version for this package will be. Check the [`package.json`](./package.json)'s current version to begin.
 2. Run the following command with your new version in place of `<VERSION>`:
 
    ```bash
-   TAG=<VERSION> npm run release
+   npm run tag --value=<VERSION>
    ```
 
-   If it was successful, you'll get a link like https://github.com/tonytino/monkeyspan/releases/new?tag=YOUR_VERSION&title=YOUR_VERSION in the output. Look for the rocket: 🚀
+   If it was successful, you'll get a link like `https://github.com/tonytino/monkeyspan/releases/tag/<VERSION>` at the end of output.
 
-   _If the `release` script fails, check the git log to see if a commit was created. If so, you'll have to undo the commit if you want to run the script again. Simply run the following to do so:_
+3. Go to the URL provided by the script output to see your new release in GitHub.
 
-   ```bash
-   git reset HEAD\^
-   ```
-
-3. Go to the URL provided by the `release` script output, and make a release for your new version (a tag was produced by the `release` script using the version you provided).
-
-4. Once the release is created, go to the [Actions tab](https://github.com/tonytino/monkeyspan/actions) for this project and you should see a job running for your release, which, if successful, will upload your new version of this package to JFrog. Note that it takes a minute or so for JFrogs API to reflect the successful upload.
+4. Go to the [Actions tab](https://github.com/tonytino/monkeyspan/actions) for this project and you should see a job running for your release, which, if successful, will upload your new version of this package to [npm].
 
 <!-- README META RESOURCES -->
 
 [Semantic Versioning]: https://semver.org
+[npm]: https://www.npmjs.com/package/monkeyspan

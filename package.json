@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "description": "A React component named MonkeySpan!",
   "main": "bundle.js",
-  "scripts": {},
+  "scripts": {
+    "test:babel": "npx babel src --out-dir .babel-config-test/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonytino/monkeyspan.git"
@@ -21,11 +23,19 @@
   },
   "homepage": "https://github.com/tonytino/monkeyspan#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5"
   }
 }

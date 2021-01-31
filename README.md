@@ -30,7 +30,13 @@ function App() {
 export default App;
 ```
 
+## Changes
+
+Check out the [CHANGELOG](CHANGELOG.md) for more information.
+
 ## Contributing
+
+*Please note that this project follows the practice of [Semantic Versioning].*
 
 ### Making Changes
 
@@ -66,13 +72,16 @@ _For now, the only way to contribute to this package with visibility into the ch
 
 ### Available Scripts
 
-| Command | Env Vars | Example | Purpose
+| Command | Params | Example | Purpose
 | - | - | - | - |
 | build | none | `npm run build` | Runs `npm run build:rollup` |
 | build:rollup | none | `npm run build:rollup` | Generates a build and source map (`bundle.js` & `bundle.js.map`) using Rollup & Babel. |
 | clean | none | `npm run clean` | Runs `npm run clean:eslint` and `npm run clean:prettier` |
 | clean:eslint | none | `npm run clean:eslint` | Runs `npx eslint --fix .`, which attempts to resolve all eslint issues in the project. |
 | clean:prettier | none | `npm run clean:prettier` | Runs `npx prettier --write .`, which attempts to resolve all prettier issues in the project. |
+| tag | `--value` | `npm run tag --value=1.2.3` | Runs `npm run tag:set --value=<value>` and `npm run tag:release --value=<value>` |
+| tag:set | `--value` | `npm run tag:set --value=1.2.3` | Runs `npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value`, which updates the `package.json` version to the value provided, updates the `package-lock.json`, generates a commit for the changes, and tags the commit using the value provided. |
+| tag:release | `--value` | `npm run tag:release --value=1.2.3` | Runs `git push origin $npm_config_value && gh release create $npm_config_value --title \"$npm_config_value\"`, which pushes the tag value provided to GitHub, then produces a release for it using the `gh` cli. _You will need the [gh cli](https://github.com/cli/cli) for this command to work._ |
 | test | none | `npm run test` | Runs `npm run test:eslint` and `npm run test:prettier` |
 | test:babel | none | `npm run test:babel` | Runs `npx babel src --out-dir .babel-config-test/`, providing a glimpse at how babel's current config transforms the src code. Find the output in `.babel-config-test/`. |
 | test:eslint | none | `npm run test:eslint` | Runs `npx eslint .`, providing info about issues. |
@@ -105,3 +114,7 @@ To do so, you'd simply add your component, commit your work, then produce your v
 3. Go to the URL provided by the `release` script output, and make a release for your new version (a tag was produced by the `release` script using the version you provided).
 
 4. Once the release is created, go to the [Actions tab](https://github.com/tonytino/monkeyspan/actions) for this project and you should see a job running for your release, which, if successful, will upload your new version of this package to JFrog. Note that it takes a minute or so for JFrogs API to reflect the successful upload.
+
+<!-- README META RESOURCES -->
+
+[Semantic Versioning]: https://semver.org

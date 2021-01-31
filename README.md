@@ -91,7 +91,6 @@ _For now, the only way to contribute to this package with visibility into the ch
 | test:babel | none | `npm run test:babel` | Runs `npx babel src --out-dir .babel-config-test/`, providing a glimpse at how babel's current config transforms the src code. Find the output in `.babel-config-test/`. |
 | test:eslint | none | `npm run test:eslint` | Runs `npx eslint .`, providing info about issues. |
 | test:prettier | none | `npm run test:prettier` | Runs `npx prettier --check .`, providing info about issues. |
-| release | TAG (e.g. 1.2.3) | `TAG=1.2.3 npm run release` | Generates a git tag using the TAG supplied, and pushes it to GitHub, then provides a link to follow to create a release in GitHub for the new tag. *If the script fails, check the git log to see if a commit was created. If so, you'll have to undo the commit if you want to run the script again. Simply run the following to do so:*  `git reset HEAD\^` |
 
 ### Publishing Releases
 

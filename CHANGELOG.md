@@ -2,6 +2,12 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
+## [NEXT] - 2021-MM-DD
+
+### Updated
+
+- Update README
+
 ## [0.2.3] - 2021-01-31
 
 ### Updated
@@ -34,6 +40,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
+[next]: https://github.com/tonytino/monkeyspan/releases/tag/NEXT
 [0.2.3]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.3
 [0.2.2]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.2
 [0.2.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.1

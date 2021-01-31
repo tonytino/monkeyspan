@@ -1,0 +1,31 @@
+{
+  "name": "monkeyspan",
+  "version": "0.0.2",
+  "description": "A React component named MonkeySpan!",
+  "main": "bundle.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonytino/monkeyspan.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "npm",
+    "package"
+  ],
+  "author": "Anthony Hernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonytino/monkeyspan/issues"
+  },
+  "homepage": "https://github.com/tonytino/monkeyspan#readme",
+  "devDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

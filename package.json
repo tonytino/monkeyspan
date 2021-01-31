@@ -6,6 +6,10 @@
   "scripts": {
     "build": "npm run build:rollup",
     "build:rollup": "npx rollup --config",
+    "clean": "npm run clean:eslint",
+    "clean:eslint": "npx eslint --fix .",
+    "test": "npm run test:eslint",
+    "test:eslint": "npx eslint .",
     "test:babel": "npx babel src --out-dir .babel-config-test/"
   },
   "repository": {
@@ -32,6 +36,12 @@
     "@babel/preset-react": "^7.12.10",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^11.1.1",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.38.1"

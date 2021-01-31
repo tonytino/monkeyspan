@@ -1,6 +1,6 @@
 {
   "name": "monkeyspan",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A React component named MonkeySpan!",
   "main": "bundle.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "clean": "npm run clean:eslint && npm run clean:prettier",
     "clean:eslint": "npx eslint --fix .",
     "clean:prettier": "npx prettier --write .",
+    "release": "npm i && git ci -am \"$TAG\" && git tag $TAG && git push origin $TAG && git push && echo \"https://github.com/tonytino/monkeyspan/releases/new?tag=$TAG&title=$TAG 🚀\"",
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "npx eslint .",
     "test:prettier": "npx prettier --check .",

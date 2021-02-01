@@ -12,6 +12,8 @@ Find this package on [npm]. 👾
    <img alt="latest" src="https://img.shields.io/npm/v/monkeyspan/latest.svg" />
 </a>
 
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://codesandbox.io/s/nervous-frost-r0qcp?file=/src/App.js)
+
 ## Tooling
 
 - [Babel](https://babeljs.io/)
@@ -102,11 +104,14 @@ _Please note that this project follows the practices of [Semantic Versioning] an
 | - | - | - | - |
 | build | none | `npm run build` | Runs `npm run build:rollup` |
 | build:storybook | none | `npm run build:storybook` | Generates a build for storybook using `build-storybook`. |
+| build:storybook:docs | none | `npm run build:storybook:docs` | Generates a build for storybook docs using `build-storybook --docs`. |
 | build:rollup | none | `npm run build:rollup` | Generates a build and source map (`bundle.js` & `bundle.js.map`) using Rollup & Babel. |
 | clean | none | `npm run clean` | Runs `npm run clean:eslint` and `npm run clean:prettier` |
 | clean:eslint | none | `npm run clean:eslint` | Runs `npx eslint --fix .`, which attempts to resolve all eslint issues in the project. |
 | clean:prettier | none | `npm run clean:prettier` | Runs `npx prettier --write .`, which attempts to resolve all prettier issues in the project. |
 | storybook | none | `npm run storybook` | Starts storybook on port 6006 via `start-storybook -p 6006`. |
+| storybook:docs | none | `npm run storybook:docs` | Starts storybook on port 6006 in docs mode via `start-storybook -p 6006 --docs`. |
+| storybook:nocache | none | `npm run storybook:nocache` | Starts storybook on port 6006 without manager caching via `start-storybook -p 6006 --no-manager-cache`. |
 | tag | `--value` | `npm run tag --value=1.2.3` | Runs `npm run tag:set --value=<value>` and `npm run tag:release --value=<value>` |
 | tag:set | `--value` | `npm run tag:set --value=1.2.3` | Runs `npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value`, which updates the `package.json` version to the value provided, updates the `package-lock.json`, generates a commit for the changes, and tags the commit using the value provided. |
 | tag:release | `--value` | `npm run tag:release --value=1.2.3` | Runs `git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md`, which pushes the tag value provided to GitHub, then produces a release for it using the `gh` cli. _You will need the [gh cli](https://github.com/cli/cli) for this command to work._ |

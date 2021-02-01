@@ -6,24 +6,28 @@ import MonkeySpan from "./MonkeySpan";
 const Template = (args) => <MonkeySpan {...args} />;
 
 const MonkeyFaceEmoji = Template.bind({});
+const style = { fontSize: "5rem" };
 
 MonkeyFaceEmoji.args = {
-  ariaLabel: "A Monkey Face Emoji",
+  label: "A Monkey Face Emoji",
   children: "🐵",
+  style,
 };
 
 const CatFaceEmoji = Template.bind({});
 
 CatFaceEmoji.args = {
-  ariaLabel: "A Cat Face Emoji",
+  label: "A Cat Face Emoji",
   children: "🐱",
+  style,
 };
 
 const DogEmoji = Template.bind({});
 
 DogEmoji.args = {
-  ariaLabel: "A Dog Face Emoji",
+  label: "A Dog Face Emoji",
   children: "🐶",
+  style,
 };
 
 export { MonkeyFaceEmoji, CatFaceEmoji, DogEmoji };

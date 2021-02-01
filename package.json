@@ -7,17 +7,20 @@
     "build": "npm run build:rollup",
     "build:rollup": "npx rollup --config",
     "build:storybook": "build-storybook",
+    "build:storybook:docs": "build-storybook --docs",
     "clean": "npm run clean:eslint && npm run clean:prettier",
     "clean:eslint": "npx eslint --fix .",
     "clean:prettier": "npx prettier --write .",
     "storybook": "start-storybook -p 6006",
+    "storybook:docs": "start-storybook -p 6006 --docs",
+    "storybook:nocache": "start-storybook -p 6006 --no-manager-cache",
     "tag": "npm run tag:set --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
     "tag:set": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
     "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md",
     "test": "npm run test:eslint && npm run test:prettier",
+    "test:babel": "npx babel src --out-dir .babel-config-test/",
     "test:eslint": "npx eslint .",
-    "test:prettier": "npx prettier --check .",
-    "test:babel": "npx babel src --out-dir .babel-config-test/"
+    "test:prettier": "npx prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -44,10 +47,12 @@
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
+    "@storybook/addon-a11y": "^6.1.15",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",
     "@storybook/addon-links": "^6.1.15",
     "@storybook/react": "^6.1.15",
+    "@storybook/theming": "^6.1.15",
     "babel-loader": "^8.2.2",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -59,7 +64,6 @@
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "prettier": "2.2.1",
-    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.38.1"
@@ -69,7 +73,8 @@
     "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5"
+    "@babel/runtime": "^7.12.5",
+    "prop-types": "^15.7.2"
   },
   "husky": {
     "hooks": {

@@ -4,15 +4,17 @@
 
 An example of how to make a React component package. 🐒
 
-See this package in action in this [CodeSandbox](https://codesandbox.io/s/nervous-frost-r0qcp?file=/src/App.js). 🏜
-
-Find this package on [npm]. 👾
-
-<a href="https://github.com/tonytino/monkeyspan" title="latest">
+<a href="https://www.npmjs.com/package/monkeyspan" title="latest">
    <img alt="latest" src="https://img.shields.io/npm/v/monkeyspan/latest.svg" />
 </a>
 
-[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://codesandbox.io/s/nervous-frost-r0qcp?file=/src/App.js)
+Find this package on [npm].
+
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://monkeyspan.netlify.app/)
+
+Tinker with this component in [Storybook].
+
+See this package in action in this [CodeSandbox](https://codesandbox.io/s/nervous-frost-r0qcp?file=/src/App.js). 🏜
 
 ## Tooling
 
@@ -146,6 +148,7 @@ To do so, you'd simply add your component/feature, commit your work, then produc
 
 <!-- README META RESOURCES -->
 
-[Semantic Versioning]: https://semver.org
 [CHANGELOG]: ./CHANGELOG.md
 [npm]: https://www.npmjs.com/package/monkeyspan
+[Semantic Versioning]: https://semver.org
+[Storybook]: https://monkeyspan.netlify.app/

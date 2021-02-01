@@ -11,6 +11,7 @@ Based on [Keep a CHANGELOG]. 🪵
 - Create `dependabot.yml`
 - Add and configure babel plugin to remove prop types
 - Remove reference to non-existent storybook dep
+- Update README
 
 ## [0.3.0] - 2021-02-01
 

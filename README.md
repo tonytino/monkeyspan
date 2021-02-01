@@ -1,10 +1,10 @@
 # MonkeySpan
 
-## About
-
 [![npm](https://img.shields.io/npm/v/monkeyspan/latest.svg)](https://www.npmjs.com/package/monkeyspan)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://monkeyspan.netlify.app/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
+## About
 
 An example of how to make a React component package. 🐒
 

@@ -7,6 +7,9 @@ Based on [Keep a CHANGELOG]. 🪵
 ### Changes
 
 - Add and configure Jest
+- Add and configure @testing-library/react, @testing-library/dom,
+  @testing-library/jest-dom, and @testing-library/user-event
+- Add a test suite for `<MonkeySpan />`
 
 ## [0.3.2] - 2021-02-01
 

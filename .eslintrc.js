@@ -12,5 +12,6 @@ module.exports = {
   plugins: ["jest", "react"],
   rules: {
     "react/jsx-props-no-spreading": "off",
+    "jest/prefer-expect-assertions": "off",
   },
 };

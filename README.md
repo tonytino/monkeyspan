@@ -28,6 +28,7 @@ See this package in action in this [CodeSandbox](https://codesandbox.io/s/nervou
 - [prop-types](https://www.npmjs.com/package/prop-types)
 - [Rollup](https://rollupjs.org/guide/en/)
 - [Storybook](https://storybook.js.org/)
+- [@testing-libary](https://testing-library.com/)
 
 ## Usage
 

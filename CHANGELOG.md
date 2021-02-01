@@ -2,11 +2,15 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
-## [NEXT] - 2021-MM-DD
+## [0.3.0] - 2021-MM-DD
 
 ### Updated
 
 - Update README
+- Fix issue preventing lint-staged from fixing jsx files
+- Add default props for MonkeySpan
+- Add and configure storybook, with MonkeySpan story
+- Add addons for storybook
 
 ## [0.2.3] - 2021-01-31
 
@@ -40,7 +44,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
-[next]: https://github.com/tonytino/monkeyspan/releases/tag/NEXT
+[0.3.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.0
 [0.2.3]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.3
 [0.2.2]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.2
 [0.2.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.1

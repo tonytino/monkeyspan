@@ -4,13 +4,9 @@
 
 An example of how to make a React component package. 🐒
 
-<a href="https://www.npmjs.com/package/monkeyspan" title="latest">
-   <img alt="latest" src="https://img.shields.io/npm/v/monkeyspan/latest.svg" />
-</a>
-
-Find this package on [npm].
-
+[![npm](https://img.shields.io/npm/v/monkeyspan/latest.svg)](https://www.npmjs.com/package/monkeyspan)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://monkeyspan.netlify.app/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Tinker with this component in [Storybook].
 

@@ -1,6 +1,7 @@
 # MonkeySpan
 
 [![npm](https://img.shields.io/npm/v/monkeyspan/latest.svg)](https://www.npmjs.com/package/monkeyspan)
+![Node.js Package](https://github.com/tonytino/monkeyspan/workflows/Node.js%20Package/badge.svg)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://monkeyspan.netlify.app/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 

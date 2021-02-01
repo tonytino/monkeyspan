@@ -2,6 +2,12 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
+## [0.3.2] - 2021-02-01
+
+### Updated
+
+- Code formatting
+
 ## [0.3.1] - 2021-02-01
 
 ### Updated
@@ -55,6 +61,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
+[0.3.2]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.2
 [0.3.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.1
 [0.3.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.0
 [0.2.3]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.3

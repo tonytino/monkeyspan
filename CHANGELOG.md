@@ -2,15 +2,21 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
+## [0.4.0] - 2021-02-01
+
+### Changes
+
+- Add and configure Jest
+
 ## [0.3.2] - 2021-02-01
 
-### Updated
+### Changes
 
 - Code formatting
 
 ## [0.3.1] - 2021-02-01
 
-### Updated
+### Changes
 
 - Create `SECURITY.md`
 - Create `codeql-analysis.yml`
@@ -21,7 +27,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 ## [0.3.0] - 2021-02-01
 
-### Updated
+### Changes
 
 - Update README
 - Fix issue preventing lint-staged from fixing jsx files
@@ -31,25 +37,25 @@ Based on [Keep a CHANGELOG]. 🪵
 
 ## [0.2.3] - 2021-01-31
 
-### Updated
+### Changes
 
 - Update instructions for publishing releases
 
 ## [0.2.2] - 2021-01-31
 
-### Updated
+### Changes
 
 - Automate more of the `tag:release` script
 
 ## [0.2.1] - 2021-01-31
 
-### Added
+### Changes
 
 - Add [@rollup/plugin-commonjs](https://www.npmjs.com/package/@rollup/plugin-commonjs)
 
 ## [0.2.0] - 2021-01-31
 
-### Added
+### Changes
 
 - Add [prop-types](https://www.npmjs.com/package/prop-types)
 - Scripts for generating tags and releases
@@ -61,6 +67,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
+[0.4.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.4.0
 [0.3.2]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.2
 [0.3.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.1
 [0.3.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.0

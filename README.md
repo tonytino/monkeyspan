@@ -21,6 +21,7 @@ See this package in action in this [CodeSandbox](https://codesandbox.io/s/nervou
 - [Babel](https://babeljs.io/)
 - [ESLint](https://eslint.org/)
 - [GitHub Actions](https://github.com/features/actions)
+- [Jest](https://jestjs.io/)
 - [Husky](https://github.com/typicode/husky)
 - [lint-staged](https://github.com/okonet/lint-staged)
 - [Prettier](https://prettier.io/)
@@ -117,8 +118,9 @@ _Please note that this project follows the practices of [Semantic Versioning] an
 | tag | `--value` | `npm run tag --value=1.2.3` | Runs `npm run tag:set --value=<value>` and `npm run tag:release --value=<value>` |
 | tag:set | `--value` | `npm run tag:set --value=1.2.3` | Runs `npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value`, which updates the `package.json` version to the value provided, updates the `package-lock.json`, generates a commit for the changes, and tags the commit using the value provided. |
 | tag:release | `--value` | `npm run tag:release --value=1.2.3` | Runs `git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md`, which pushes the tag value provided to GitHub, then produces a release for it using the `gh` cli. _You will need the [gh cli](https://github.com/cli/cli) for this command to work._ |
-| test | none | `npm run test` | Runs `npm run test:eslint` and `npm run test:prettier` |
+| test | none | `npm run test` | Runs `npm run test:eslint` and `npm run test:prettier` and `npm run test:code` |
 | test:babel | none | `npm run test:babel` | Runs `npx babel src --out-dir .babel-config-test/`, providing a glimpse at how babel's current config transforms the src code. Find the output in `.babel-config-test/`. |
+| test:code | none | `npm run test:code` | Runs the test suite via `npx jest`. |
 | test:eslint | none | `npm run test:eslint` | Runs `npx eslint .`, providing info about issues. |
 | test:prettier | none | `npm run test:prettier` | Runs `npx prettier --check .`, providing info about issues. |
 

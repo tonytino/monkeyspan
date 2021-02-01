@@ -123,3 +123,4 @@ dist
 # build artifacts
 bundle.js
 bundle.js.map
+storybook-static/

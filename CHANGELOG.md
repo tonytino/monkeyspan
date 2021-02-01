@@ -2,7 +2,17 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
-## [0.3.0] - 2021-MM-DD
+## [0.3.1] - 2021-02-01
+
+### Updated
+
+- Create `SECURITY.md`
+- Create `codeql-analysis.yml`
+- Create `dependabot.yml`
+- Add and configure babel plugin to remove prop types
+- Remove reference to non-existent storybook dep
+
+## [0.3.0] - 2021-02-01
 
 ### Updated
 
@@ -44,6 +54,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
+[0.3.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.1
 [0.3.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.0
 [0.2.3]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.3
 [0.2.2]: https://github.com/tonytino/monkeyspan/releases/tag/0.2.2

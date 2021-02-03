@@ -112,6 +112,7 @@ _Please note that this project follows the practices of [Semantic Versioning] an
 | clean:artifacts | none | `npm run clean:artifacts` | Runs `rm -rv ./dist ; rm -rv .babel-config-test ; rm -rv storybook-static ; rm -v bundle.js ; rm -v bundle.js.map`, which attempts to delete artifacts created by other scripts. |
 | clean:eslint | none | `npm run clean:eslint` | Runs `npx eslint --fix .`, which attempts to resolve all eslint issues in the project. |
 | clean:prettier | none | `npm run clean:prettier` | Runs `npx prettier --write .`, which attempts to resolve all prettier issues in the project. |
+| pr:create | none | `gh pr create --web --fill` | Pushes your branch up, opens your browser at the create PR page for your branch, and fills in commit log info automatically. |
 | storybook | none | `npm run storybook` | Starts storybook on port 6006 via `start-storybook -p 6006`. |
 | storybook:docs | none | `npm run storybook:docs` | Starts storybook on port 6006 in docs mode via `start-storybook -p 6006 --docs`. |
 | storybook:nocache | none | `npm run storybook:nocache` | Starts storybook on port 6006 without manager caching via `start-storybook -p 6006 --no-manager-cache`. |

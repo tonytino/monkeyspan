@@ -7,6 +7,8 @@ Based on [Keep a CHANGELOG]. 🪵
 ### Changes
 
 - Convert to [TypeScript](https://www.typescriptlang.org/)
+- Update `.github/workflows/npm-publish.yml` to use node 14
+- Update `package.json` to designate node 14
 - Add scripts
 - Update README
 

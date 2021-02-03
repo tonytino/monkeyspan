@@ -1,6 +1,6 @@
 {
   "name": "monkeyspan",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "A React component named MonkeySpan!",
   "main": "bundle.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "storybook": "start-storybook -p 6006",
     "storybook:docs": "start-storybook -p 6006 --docs",
     "storybook:nocache": "start-storybook -p 6006 --no-manager-cache",
-    "tag": "npm run tag:set --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
+    "tag": "npm run tag:create --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
     "tag:create": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
     "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value",
     "test": "npm run test:eslint && npm run test:prettier && npm run test:types && npm run test:code",

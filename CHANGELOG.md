@@ -11,6 +11,7 @@ Based on [Keep a CHANGELOG]. 🪵
 - Update `package.json` to designate node 14
 - Add scripts
 - Update README
+- Update various deps
 
 ## [0.4.1] - 2021-02-01
 

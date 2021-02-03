@@ -2,6 +2,16 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
+## [0.5.0] - 2021-02-03
+
+### Changes
+
+- Convert to [TypeScript](https://www.typescriptlang.org/)
+- Update `.github/workflows/npm-publish.yml` to use node 14
+- Update `package.json` to designate node 14
+- Add scripts
+- Update README
+
 ## [0.4.1] - 2021-02-01
 
 ### Changes
@@ -76,6 +86,7 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
+[0.5.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.5.0
 [0.4.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.4.1
 [0.4.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.4.0
 [0.3.2]: https://github.com/tonytino/monkeyspan/releases/tag/0.3.2

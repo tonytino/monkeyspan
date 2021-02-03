@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "esnext"
+  },
+  "include": ["./src/index.ts"]
+}

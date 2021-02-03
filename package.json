@@ -9,19 +9,22 @@
     "build:storybook": "build-storybook",
     "build:storybook:docs": "build-storybook --docs",
     "clean": "npm run clean:eslint && npm run clean:prettier",
+    "clean:artifacts": "rm -rv ./dist ; rm -rv .babel-config-test ; rm -rv storybook-static ; rm -v bundle.js ; rm -v bundle.js.map",
     "clean:eslint": "npx eslint --fix .",
     "clean:prettier": "npx prettier --write .",
+    "pr:create": "gh pr create --web --fill",
     "storybook": "start-storybook -p 6006",
     "storybook:docs": "start-storybook -p 6006 --docs",
     "storybook:nocache": "start-storybook -p 6006 --no-manager-cache",
     "tag": "npm run tag:set --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
-    "tag:set": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
-    "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md",
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:code",
+    "tag:create": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
+    "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:types && npm run test:code",
     "test:code": "npx jest",
-    "test:babel": "npx babel src --out-dir .babel-config-test/",
+    "test:babel": "npx babel src/ --out-dir .babel-config-test --extensions \".ts,.tsx,.js,.jsx\"",
     "test:eslint": "npx eslint .",
-    "test:prettier": "npx prettier --check ."
+    "test:prettier": "npx prettier --check .",
+    "test:types": "npx tsc"
   },
   "repository": {
     "type": "git",
@@ -45,9 +48,11 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
+    "@rollup/plugin-typescript": "^8.1.1",
     "@storybook/addon-a11y": "^6.1.15",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",
@@ -58,10 +63,16 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
+    "@tsconfig/node14": "^1.0.0",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "eslint": "^7.19.0",
-    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
@@ -76,7 +87,8 @@
     "prettier": "2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "rollup": "^2.38.1"
+    "rollup": "^2.38.1",
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "react": "^17.0.1",
@@ -92,7 +104,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

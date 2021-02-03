@@ -124,3 +124,8 @@ dist
 bundle.js
 bundle.js.map
 storybook-static/
+
+# config files
+.*rc.js
+*.config.js
+*.setup.js

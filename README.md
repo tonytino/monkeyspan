@@ -25,7 +25,8 @@ See this package in action in this [CodeSandbox](https://codesandbox.io/s/nervou
 - [prop-types](https://www.npmjs.com/package/prop-types)
 - [Rollup](https://rollupjs.org/guide/en/)
 - [Storybook](https://storybook.js.org/)
-- [@testing-libary](https://testing-library.com/)
+- [@testing-library](https://testing-library.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Usage
 
@@ -108,6 +109,7 @@ _Please note that this project follows the practices of [Semantic Versioning] an
 | build:storybook:docs | none | `npm run build:storybook:docs` | Generates a build for storybook docs using `build-storybook --docs`. |
 | build:rollup | none | `npm run build:rollup` | Generates a build and source map (`bundle.js` & `bundle.js.map`) using Rollup & Babel. |
 | clean | none | `npm run clean` | Runs `npm run clean:eslint` and `npm run clean:prettier` |
+| clean:artifacts | none | `npm run clean:artifacts` | Runs `rm -rv ./dist ; rm -rv .babel-config-test ; rm -rv storybook-static ; rm -v bundle.js ; rm -v bundle.js.map`, which attempts to delete artifacts created by other scripts. |
 | clean:eslint | none | `npm run clean:eslint` | Runs `npx eslint --fix .`, which attempts to resolve all eslint issues in the project. |
 | clean:prettier | none | `npm run clean:prettier` | Runs `npx prettier --write .`, which attempts to resolve all prettier issues in the project. |
 | storybook | none | `npm run storybook` | Starts storybook on port 6006 via `start-storybook -p 6006`. |
@@ -116,11 +118,12 @@ _Please note that this project follows the practices of [Semantic Versioning] an
 | tag | `--value` | `npm run tag --value=1.2.3` | Runs `npm run tag:set --value=<value>` and `npm run tag:release --value=<value>` |
 | tag:set | `--value` | `npm run tag:set --value=1.2.3` | Runs `npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value`, which updates the `package.json` version to the value provided, updates the `package-lock.json`, generates a commit for the changes, and tags the commit using the value provided. |
 | tag:release | `--value` | `npm run tag:release --value=1.2.3` | Runs `git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md`, which pushes the tag value provided to GitHub, then produces a release for it using the `gh` cli. _You will need the [gh cli](https://github.com/cli/cli) for this command to work._ |
-| test | none | `npm run test` | Runs `npm run test:eslint` and `npm run test:prettier` and `npm run test:code` |
-| test:babel | none | `npm run test:babel` | Runs `npx babel src --out-dir .babel-config-test/`, providing a glimpse at how babel's current config transforms the src code. Find the output in `.babel-config-test/`. |
+| test | none | `npm run test` | Runs `npm run test:eslint && npm run test:prettier && npm run test:types && npm run test:code` |
+| test:babel | none | `npm run test:babel` | Runs `npx babel src/ --out-dir .babel-config-test --extensions ".ts,.tsx,.js,.jsx"`, providing a glimpse at how babel's current config transforms the src code. Find the output in `.babel-config-test/`. |
 | test:code | none | `npm run test:code` | Runs the test suite via `npx jest`. |
 | test:eslint | none | `npm run test:eslint` | Runs `npx eslint .`, providing info about issues. |
 | test:prettier | none | `npm run test:prettier` | Runs `npx prettier --check .`, providing info about issues. |
+| test:types | none | `npm run test:types` | Runs `npx tsc`, which runs the typescript compiler and will raise typescript issues. |
 
 ### Publishing Releases
 

@@ -9,6 +9,7 @@
     "build:storybook": "build-storybook",
     "build:storybook:docs": "build-storybook --docs",
     "clean": "npm run clean:eslint && npm run clean:prettier",
+    "clean:artifacts": "rm -rv ./dist ; rm -rv .babel-config-test ; rm -rv storybook-static ; rm -v bundle.js ; rm -v bundle.js.map",
     "clean:eslint": "npx eslint --fix .",
     "clean:prettier": "npx prettier --write .",
     "storybook": "start-storybook -p 6006",
@@ -17,11 +18,12 @@
     "tag": "npm run tag:set --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
     "tag:set": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
     "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value --notes-file ./CHANGELOG.md",
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:code",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:types && npm run test:code",
     "test:code": "npx jest",
-    "test:babel": "npx babel src --out-dir .babel-config-test/",
+    "test:babel": "npx babel src/ --out-dir .babel-config-test --extensions \".ts,.tsx,.js,.jsx\"",
     "test:eslint": "npx eslint .",
-    "test:prettier": "npx prettier --check ."
+    "test:prettier": "npx prettier --check .",
+    "test:types": "npx tsc"
   },
   "repository": {
     "type": "git",

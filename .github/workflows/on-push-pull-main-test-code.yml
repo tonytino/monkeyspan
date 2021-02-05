@@ -20,5 +20,7 @@ jobs:
     steps:
       # Pulls in your repository so your job can access your code
       - uses: actions/checkout@v2
+      # Perform a clean install
+      - run: npm ci
       # Runs the test script
       - run: npm run test:code

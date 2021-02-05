@@ -6,6 +6,14 @@ Based on [Keep a CHANGELOG]. 🪵
 
 ### Changes
 
+- Add workflow scripts for CI (testing) in push/pull requests to `main`
+- Update various deps
+- Remove codeql-analysis.yml; no TS support
+
+## [0.5.0] - 2021-02-03
+
+### Changes
+
 - Convert to [TypeScript](https://www.typescriptlang.org/)
 - Update `.github/workflows/npm-publish.yml` to use node 14
 - Update `package.json` to designate node 14

@@ -2,7 +2,26 @@
 
 Based on [Keep a CHANGELOG]. 🪵
 
-## [0.5.0] - 2021-02-03
+## [0.6.0] - 2021-02-06
+
+### Changes
+
+- Add support for native CSS, CSS Modules, and Stage 2 CSS features (`postcss-preset-env`)
+  - Add and configure `postcss`
+  - Add support for CSS mocking during testing
+  - Configure `rollup` to process CSS
+  - Configure Storybook's webpack to support new css features
+- Add new project-wide css files (`src/styles`)
+- Add and configure Stylelint
+- Add configuration file for `lint-staged`
+- Add some features to example component to demonstrate CSS functionality
+- Add and update scripts
+- Update README
+- Upgrade all deps
+- Add new GitHub CI check
+- Remove engine specification from `package.json`
+
+## [0.5.1] - 2021-02-03
 
 ### Changes
 
@@ -95,6 +114,8 @@ Based on [Keep a CHANGELOG]. 🪵
 
 <!-- RELEASE LINKS -->
 
+[0.6.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.6.0
+[0.5.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.5.1
 [0.5.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.5.0
 [0.4.1]: https://github.com/tonytino/monkeyspan/releases/tag/0.4.1
 [0.4.0]: https://github.com/tonytino/monkeyspan/releases/tag/0.4.0

@@ -121,6 +121,4 @@ dist
 .babel-config-test/
 
 # build artifacts
-bundle.js
-bundle.js.map
 storybook-static/

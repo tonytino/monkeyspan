@@ -1,0 +1,5 @@
+/* Imported by postcss.config.js */
+:root {
+  --slow-spin-speed: 20s;
+  --fast-spin-speed: 1s;
+}

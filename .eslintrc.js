@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'airbnb-typescript',
     'prettier',
@@ -15,14 +16,19 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2021,
+    sourceType: 'module',
     project: './tsconfig.eslint.json',
   },
   plugins: [
-    'jest',
-    'react',
-    'jest-dom',
-    'testing-library',
     '@typescript-eslint',
+    'jest',
+    'jest-dom',
+    'react',
+    'testing-library',
   ],
   rules: {
     'react/jsx-props-no-spreading': 'off',

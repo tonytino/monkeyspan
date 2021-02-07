@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       # Test our code
       - run: npm run test
-      # Create our bundle.js & bundle.js.map using the build script
+      # Create our types and bundles in ./dist
       - run: npm run build
       # Publish our package to npm
       - run: npm publish

@@ -1,9 +1,6 @@
-const ignore = ['./src/.example-stories/'];
-
 const plugins = [
   // https://babeljs.io/docs/en/babel-plugin-transform-runtime#options
   ['@babel/plugin-transform-runtime', {}],
-  ['transform-react-remove-prop-types', { removeImport: true }],
 ];
 
 const presets = [
@@ -26,4 +23,4 @@ const presets = [
 ];
 
 // https://babeljs.io/docs/en/options
-module.exports = { ignore, plugins, presets };
+module.exports = { plugins, presets };

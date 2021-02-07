@@ -1,0 +1,14 @@
+.spinmoji-fast {
+  animation-duration: var(--fast-spin-speed);
+}
+.spinmoji-fast-reverse {
+  animation-direction: reverse;
+  animation-duration: var(--fast-spin-speed);
+}
+.spinmoji-slow {
+  animation-duration: var(--slow-spin-speed);
+}
+.spinmoji-slow-reverse {
+  animation-direction: reverse;
+  animation-duration: var(--slow-spin-speed);
+}

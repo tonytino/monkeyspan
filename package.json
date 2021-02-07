@@ -2,14 +2,23 @@
   "name": "monkeyspan",
   "version": "0.5.1",
   "description": "A React component named MonkeySpan!",
-  "main": "bundle.js",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npm run build:rollup",
+    "build": "npm run build:types && npm run build:rollup",
+    "build:link": "npm run build && npx yalc publish && echo \"yalc add monkeyspan\" | pbcopy",
     "build:rollup": "npx rollup --config",
+    "build:rollup:watch": "npx rollup --config --watch",
     "build:storybook": "build-storybook",
     "build:storybook:docs": "build-storybook --docs",
-    "clean": "npm run clean:eslint && npm run clean:prettier",
-    "clean:artifacts": "rm -rv ./dist ; rm -rv .babel-config-test ; rm -rv storybook-static ; rm -v bundle.js ; rm -v bundle.js.map",
+    "build:types": "npx tsc --project ./tsconfig.build.json --emitDeclarationOnly",
+    "clean": "npm run clean:eslint && npm run clean:css && npm run clean:prettier",
+    "clean:artifacts": "rm -rv ./dist ; rm -rv .babel-config-test ; rm -rv storybook-static ; echo 'All clean. ✨'",
+    "clean:css": "npx stylelint 'src/**/*.css' --fix",
     "clean:eslint": "npx eslint --fix .",
     "clean:prettier": "npx prettier --write .",
     "pr:create": "gh pr create --web --fill",
@@ -18,13 +27,14 @@
     "storybook:nocache": "start-storybook -p 6006 --no-manager-cache",
     "tag": "npm run tag:create --value=$npm_config_value && npm run tag:release --value=$npm_config_value",
     "tag:create": "npx json -I -f ./package.json -e 'this.version=\"$npm_config_value\"' && npm i && git ci -am \"$npm_config_value\" && git tag $npm_config_value",
-    "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_value",
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:types && npm run test:code",
-    "test:code": "npx jest",
+    "tag:release": "git push origin $npm_config_value && gh release create $npm_config_value --title $npm_config_valued && git push",
+    "test": "npm run test:eslint && npm run test:css && npm run test:prettier && npm run test:types && npm run test:code",
     "test:babel": "npx babel src/ --out-dir .babel-config-test --extensions \".ts,.tsx,.js,.jsx\"",
+    "test:code": "npx jest",
+    "test:css": "npx stylelint 'src/**/*.css'",
     "test:eslint": "npx eslint .",
     "test:prettier": "npx prettier --check .",
-    "test:types": "npx tsc"
+    "test:types": "npx tsc --project ./tsconfig.eslint.json --noEmit"
   },
   "repository": {
     "type": "git",
@@ -109,9 +119,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
-    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   }
 }

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
+import './MonkeySpan.css';
+import styles from './MonkeySpan.module.css';
 
-export const MONKEYSPAN_DEFAULTS = {
+export const MonkeySpanDefaults = {
   children: '🐒',
   label: 'A Monkey Emoji',
+  passthrough: {},
   role: 'img',
+  scale: 1,
+  spinmoji: undefined,
 };
 
 export interface MonkeySpanProps {
@@ -16,25 +21,47 @@ export interface MonkeySpanProps {
    */
   label?: string;
   /**
+   * Properties to spread on the root element
+   */
+  passthrough?: HTMLAttributes<HTMLSpanElement>;
+  /**
    * The aria role (not recommended to change from "img")
    */
   role?: string;
+  /**
+   * What rem amount to apply for font-size
+   */
+  scale?: number;
+  /**
+   * Ability to apply a spin to the emoji
+   */
+  spinmoji?: 'fast' | 'fast-reverse' | 'slow' | 'slow-reverse';
 }
 
 function MonkeySpan(props: MonkeySpanProps): JSX.Element {
-  const { children, label, role } = props;
+  const { children, label, passthrough, role, scale, spinmoji } = props;
+  const style = { fontSize: `${scale}rem` };
 
   return (
-    <span {...props} aria-label={label} role={role}>
+    <span
+      aria-label={label}
+      className={`${styles.spinmoji} spinmoji-${spinmoji}`}
+      role={role}
+      style={style}
+      {...passthrough}
+    >
       {children}
     </span>
   );
 }
 
 MonkeySpan.defaultProps = {
-  children: MONKEYSPAN_DEFAULTS.children,
-  label: MONKEYSPAN_DEFAULTS.label,
-  role: MONKEYSPAN_DEFAULTS.role,
+  children: MonkeySpanDefaults.children,
+  label: MonkeySpanDefaults.label,
+  passthrough: MonkeySpanDefaults.passthrough,
+  role: MonkeySpanDefaults.role,
+  scale: MonkeySpanDefaults.scale,
+  spinmoji: MonkeySpanDefaults.spinmoji,
 };
 
 export default MonkeySpan;

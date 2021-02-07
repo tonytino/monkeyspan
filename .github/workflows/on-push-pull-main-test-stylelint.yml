@@ -23,4 +23,4 @@ jobs:
       # Perform a clean install
       - run: npm ci
       # Runs the test script
-      - run: npm run test:stylelint
+      - run: npm run test:css

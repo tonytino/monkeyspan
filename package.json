@@ -1,6 +1,6 @@
 {
   "name": "monkeyspan",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "A React component named MonkeySpan!",
   "main": "dist/bundle.js",
   "module": "dist/bundle.es.js",
